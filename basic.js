@@ -1,14 +1,15 @@
-console.log(THREE);
+window.onload = () => {
+  let testeEntityAdded = false;
 
-// window.onload = () => {
-//   let testeEntityAdded = false;
+  const el = document.querySelector("[gps-new-camera]");
 
-//   const el = document.querySelector("[gps-new-camera]");
-
-//   el.addEventListener("gps-camera-update-position", (e) => {
-//     if (!testeEntityAdded) {
-//         alert(`Pegue a primeira posicao: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
-//         const entity = document.createElement('')
-//     }
-//   });
-// };
+  el.addEventListener("gps-camera-update-position", (e) => {
+    if (!testeEntityAdded) {
+      alert(
+        `Pegue a primeira posicao: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`
+      );
+      const entity = document.querySelector("a-entity [#ponto]");
+      console.log(entity);
+    }
+  });
+};
