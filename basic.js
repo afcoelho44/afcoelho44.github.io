@@ -8,7 +8,7 @@ window.onload = () => {
       alert(
         `Pegue a primeira posicao: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`
       );
-      const entity = document.querySelector("a-entity [#ponto]");
+      const entity = document.querySelector("a-entity");
       console.log(entity);
     }
   });
