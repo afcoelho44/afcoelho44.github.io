@@ -10,9 +10,9 @@ window.onload = () => {
       );
       const entity = document.querySelector("a-entity");
       entity.setAttribute("scale", {
-        x: 5,
-        y: 5,
-        z: 5,
+        x: 9,
+        y: 9,
+        z: 9,
       });
       entity.setAttribute("gps-new-entity-place", {
         latitude: e.detail.position.latitude + 0.001,
