@@ -45,15 +45,12 @@ window.onload = () => {
 
   el.addEventListener("gps-camera-update-position", (e) => {
     if (!testeEntityAdded) {
-      alert(
-        `Pegue a primeira posicao: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`
-      );
       establishments.forEach(establishment => {
         const entity = document.querySelector("a-entity");
         entity.setAttribute("scale", {
-          x: 9,
-          y: 9,
-          z: 9,
+          x: 100,
+          y: 100,
+          z: 100,
         });
         entity.setAttribute("gps-new-entity-place", {
           latitude: establishment.latitude,
