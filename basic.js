@@ -47,16 +47,19 @@ window.onload = () => {
     if (!testeEntityAdded) {
       establishments.forEach(establishment => {
         const entity = document.createElement("a-entity");
+        entity.setAttribute();
         entity.setAttribute("scale", {
-          x: 100,
-          y: 100,
-          z: 100,
+          x: 9,
+          y: 9,
+          z: 9,
         });
         entity.setAttribute("gps-new-entity-place", {
           latitude: establishment.latitude,
           longitude: establishment.longitude,
         });
-
+        const point = document.createElement("a-gltf-model");
+        point.setAttribute("src", "#ponto");
+        document.querySelector("a-scene").append(point);
         alert(
           `Olha a posição!! lat : ${establishment.latitude} lon : ${establishment.longitude}`
         );
