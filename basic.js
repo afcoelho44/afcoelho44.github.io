@@ -3,8 +3,8 @@ const establishments = [
     "id": 1,
     "name": "Praça Verde",
     "active": true,
-    "latitude": -27.5310797,
-    "longitude": -49.5310797,
+    "latitude": -27.056837,
+    "longitude": -49.5336349,
     "hour": [
       12,
       0
@@ -25,8 +25,8 @@ const establishments = [
     "id": 2,
     "name": "Praça Azul",
     "active": true,
-    "latitude": -27.05656,
-    "longitude": -49.53197,
+    "latitude": -27.056864,
+    "longitude": -49.5317067,
     "hour": [
       12,
       0
@@ -59,6 +59,7 @@ window.onload = () => {
           latitude: establishment.latitude,
           longitude: establishment.longitude,
         });
+        console.log(establishment.latitude, establishment.longitude);
         document.querySelector("a-scene").append(entity);
       });
     }
