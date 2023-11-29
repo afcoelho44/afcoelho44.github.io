@@ -46,7 +46,7 @@ window.onload = () => {
   el.addEventListener("gps-camera-update-position", (e) => {
     if (!testeEntityAdded) {
       establishments.forEach(establishment => {
-        const entity = document.querySelector("a-entity");
+        const entity = document.createElement("a-entity");
         entity.setAttribute("scale", {
           x: 100,
           y: 100,
