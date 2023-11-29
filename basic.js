@@ -3,8 +3,8 @@ const establishments = [
     "id": 1,
     "name": "Praça Verde",
     "active": true,
-    "latitude": -27.056837,
-    "longitude": -49.5336349,
+    "latitude": -27.049384618553656,
+    "longitude": -49.537353515625,
     "hour": [
       12,
       0
@@ -25,8 +25,8 @@ const establishments = [
     "id": 2,
     "name": "Praça Azul",
     "active": true,
-    "latitude": -27.056864,
-    "longitude": -49.5317067,
+    "latitude": -27.049097960353766,
+    "longitude": -49.53733205795288,
     "hour": [
       12,
       0
@@ -49,9 +49,6 @@ window.onload = () => {
         `Pegue a primeira posicao: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`
       );
       establishments.forEach(establishment => {
-        alert(
-          `Chegou aqui!! ${establishment}`
-        );
         const entity = document.querySelector("a-entity");
         entity.setAttribute("scale", {
           x: 9,
@@ -62,7 +59,10 @@ window.onload = () => {
           latitude: establishment.latitude,
           longitude: establishment.longitude,
         });
-        console.log(establishment.latitude, establishment.longitude);
+
+        alert(
+          `Chegou aqui!! lat : ${establishment.latitude} lon : ${establishment.longitude}`
+        );
         document.querySelector("a-scene").append(entity);
       });
     }
