@@ -47,7 +47,6 @@ window.onload = () => {
     if (!testeEntityAdded) {
       establishments.forEach(establishment => {
         const entity = document.createElement("a-entity");
-        entity.setAttribute();
         entity.setAttribute("scale", {
           x: 9,
           y: 9,
