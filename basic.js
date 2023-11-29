@@ -49,6 +49,9 @@ window.onload = () => {
         `Pegue a primeira posicao: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`
       );
       establishments.forEach(establishment => {
+        alert(
+          `Chegou aqui!! ${establishment}`
+        );
         const entity = document.querySelector("a-entity");
         entity.setAttribute("scale", {
           x: 9,
