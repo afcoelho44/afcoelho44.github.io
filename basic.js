@@ -45,20 +45,23 @@ window.onload = () => {
 
   el.addEventListener("gps-camera-update-position", (e) => {
     if (!testeEntityAdded) {
+
       establishments.forEach(establishment => {
-        const entity = document.createElement("a-entity");
+        let latitude = establishment.latitude;
+        let longitude = establishment.longitude;
+
+        let entity = document.createElement("a-entity");
+
         entity.setAttribute("scale", {
           x: 9,
           y: 9,
           z: 9,
         });
-        entity.setAttribute("gps-new-entity-place", {
-          latitude: establishment.latitude,
-          longitude: establishment.longitude,
+        entity.setAttribute("gps-new-entity-place", `latitude: ${latitude}; longitude: ${longitude}`);
+        entity.setAttribute("gltf-model", "assets/map_point/scene.gltf");
+        entity.addEventListener('loaded', () => {
+          window.dispatchEvent(new CustomEvent('gps-new-entity-place-loaded'))
         });
-        const point = document.createElement("a-gltf-model");
-        point.setAttribute("src", "#ponto");
-        document.querySelector("a-scene").append(point);
         alert(
           `Olha a posição!! lat : ${establishment.latitude} lon : ${establishment.longitude}`
         );
