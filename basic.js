@@ -3,8 +3,8 @@ const establishments = [
     "id": 1,
     "name": "Praça Verde",
     "active": true,
-    "latitude": -49.67234674,
-    "longitude": -43.45678909,
+    "latitude": -27.5310797,
+    "longitude": -49.5310797,
     "hour": [
       12,
       0
@@ -25,8 +25,8 @@ const establishments = [
     "id": 2,
     "name": "Praça Azul",
     "active": true,
-    "latitude": -49.67234674,
-    "longitude": -43.45678909,
+    "latitude": -27.05656,
+    "longitude": -49.53197,
     "hour": [
       12,
       0
