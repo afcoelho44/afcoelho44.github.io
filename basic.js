@@ -58,7 +58,7 @@ window.onload = () => {
         });
 
         alert(
-          `Chegou aqui!! lat : ${establishment.latitude} lon : ${establishment.longitude}`
+          `Olha a posição!! lat : ${establishment.latitude} lon : ${establishment.longitude}`
         );
         document.querySelector("a-scene").append(entity);
       });
